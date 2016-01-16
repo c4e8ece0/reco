@@ -5,10 +5,24 @@
 // --------------------------------------------------------------------------
 
 function reco_jsonize($t) {
-	if(strpos($t, 'reco_') === 0 && function_exists($t)) {
-		return json_encode(json_encode((array) $t));
+	if(strpos($t, 'reco_') !== 0) {
+		return reco_err("impossible function (".htmlspecialchars($t)."), reco_* required");
 	}
-	return reco_err("unknown function (".htmlspecialchars($t).")");
+	if(!function_exists($t)) {
+		return reco_err("unknown function (".htmlspecialchars($t).")");
+	}
+
+	$r = $t();
+	if(!isset($r["errstr"])) {
+		return reco_err(htmlspecialchars($t).": errstr not exists");
+	}
+	if(!is_scalar($r["errstr"])) {
+		return reco_err(htmlspecialchars($t).": errstr not scalar");	
+	}
+
+	// ... check fields, bububu
+
+	return json_encode($res);
 }
 
 ?>
