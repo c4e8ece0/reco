@@ -1,0 +1,38 @@
+Similarity (start from https://en.wikipedia.org/wiki/Cosine_similarity)
+	Cosine similarity
+	Sørensen's quotient of similarity
+	Hamming distance
+	Correlation
+	Dice's coefficient
+	Jaccard index
+	SimRank
+
+String Metric (start from https://en.wikipedia.org/wiki/String_metric)
+	Sørensen–Dice coefficient
+	Block distance or L1 distance or City block distance
+	Jaro–Winkler distance
+	Simple matching coefficient (SMC)
+	Jaccard similarity or Jaccard coefficient or Tanimoto coefficient
+	Most frequent k characters
+	Tversky index
+	Overlap coefficient
+	Variational distance
+	Hellinger distance or Bhattacharyya distance
+	Information radius (Jensen–Shannon divergence)
+	Skew divergence
+	Confusion probability
+	Tau metric, an approximation of the Kullback–Leibler divergence
+	Fellegi and Sunters metric (SFS)
+	Maximal matches
+	TFIDF distance metric[1]
+	-- bottom recomendation
+	Approximate string matching
+	Bitap algorithm
+	Damerau–Levenshtein distance
+	Edit distance
+	Hamming distance
+	Jaro–Winkler distance
+	Lee distance
+	Levenshtein automaton
+	Levenshtein distance
+	Wagner–Fischer algorithm
