@@ -20,7 +20,8 @@ function reco_jsonize($t) {
 		return reco_err(htmlspecialchars($t).": errstr not scalar");	
 	}
 
-	// ... check fields, bububu
+	$res = call_user_func_array($t, array_slice(func_get_args(), 1));
+	// TODO: ... check fields, bububu
 
 	return json_encode($res);
 }

@@ -40,10 +40,10 @@ foreach($funcs as &$path) {
 
 // Обработка запроса
 switch(@$_GET["action"]) {
-	case "ping":
+	case "ping":       print reco_jsonize("reco_client_".$_GET["action"]); break;
 	case "entities":   print reco_jsonize("reco_client_".$_GET["action"]); break;
-	case "entitylist": print reco_jsonize("reco_client_".$_GET["action"]); break;
-	case "detail":     print reco_jsonize("reco_client_".$_GET["action"]); break;
+	case "entitylist": print reco_jsonize("reco_client_".$_GET["action"], reco_slug($_GET['target'])); break;
+	case "detail":     print reco_jsonize("reco_client_".$_GET["action"], reco_slug($_GET['target']), intval($_GET['id'])); break;
 	case "404-like":
 	default:           print reco_err("unknown action (".htmlspecialchars($_GET["action"]).")"); break;
 }
