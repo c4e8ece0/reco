@@ -20,7 +20,7 @@ $core = dirname(__FILE__).DIRECTORY_SEPARATOR.'core'.DIRECTORY_SEPARATOR;
 // Путь до начальной клиентской библиотеки функций
 $client = dirname(__FILE__).DIRECTORY_SEPARATOR.'client'.DIRECTORY_SEPARATOR;
 // Путь до проектной реализации функций для обмена данными 
-$project = dirname(__FILE__).DIRECTORY_SEPARATOR.'project'.DIRECTORY_SEPARATOR;
+$project = dirname(__FILE__).DIRECTORY_SEPARATOR.'project_example'.DIRECTORY_SEPARATOR;
 
 // Определение расположение нужного файла
 $funcs = array();
@@ -40,11 +40,12 @@ foreach($funcs as &$path) {
 
 // Обработка запроса
 switch(@$_GET["action"]) {
-	case "ping":       print reco_jsonize("reco_client_".$_GET["action"]); break;
-	case "entities":   print reco_jsonize("reco_client_".$_GET["action"]); break;
-	case "entitylist": print reco_jsonize("reco_client_".$_GET["action"], reco_slug($_GET['target'])); break;
-	case "detail":     print reco_jsonize("reco_client_".$_GET["action"], reco_slug($_GET['target']), intval($_GET['id'])); break;
-	case "404-like":
+	case "ping":       print reco_jsonize("reco_client_api_".$_GET["action"]); break;
+	case "entities":   print reco_jsonize("reco_client_api_".$_GET["action"]); break;
+	case "entitylist": print reco_jsonize("reco_client_api_".$_GET["action"], reco_slug($_GET['target'])); break;
+	case "detail":     print reco_jsonize("reco_client_api_".$_GET["action"], reco_slug($_GET['target']), intval($_GET['id'])); break;
+	case "test":       print reco_client_try(); break;
+	case "":           print reco_err("empty action"); break;
 	default:           print reco_err("unknown action (".htmlspecialchars($_GET["action"]).")"); break;
 }
 

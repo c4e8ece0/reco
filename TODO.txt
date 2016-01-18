@@ -40,3 +40,5 @@
 		Levenshtein automaton
 		Levenshtein distance
 		Wagner–Fischer algorithm
+
+3. User-specific, data-specific?

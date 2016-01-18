@@ -30,8 +30,8 @@ switch(@$_GET["action"]) {
 	case "fill":  print reco_todo("server", $_GET["action"], "закрыть дырки в данных (посчитать метрики)"); break;
 	case "calc":  print reco_todo("server", $_GET["action"], "посчитать предсказания"); break;
 	case "make":  print reco_todo("server", $_GET["action"], "дать рекомендации по группам размещения"); break;
-	case "404-like":
-	default: print reco_err("unknown action (".htmlspecialchars($_GET["action"]).")"); break;
+	case "":      print reco_err("empty action"); break;
+	default:      print reco_err("unknown action (".htmlspecialchars(@$_GET["action"]).")"); break;
 }
 
 ?>

@@ -5,7 +5,7 @@
 // --------------------------------------------------------------------------
 
 function reco_err($t) {
-	return reco_json(array("errstr"=>(string) $t));
+	return json_encode(array("errstr"=>(string) $t));
 }
 
 ?>
