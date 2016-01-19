@@ -24,12 +24,13 @@ foreach($funcs as &$path) {
 }
 
 switch(@$_GET["action"]) {
-	case "awake": print reco_jsonize("reco_server_".$_GET["action"]); break;
+	case "awake": print reco_jsonize("reco_server_api_".$_GET["action"]); break;
 	case "fetch": print reco_todo("server", $_GET["action"], "забрать какой-то контент (список или элемент)"); break;
 	case "index": print reco_todo("server", $_GET["action"], "проиндексировать контент"); break;
 	case "fill":  print reco_todo("server", $_GET["action"], "закрыть дырки в данных (посчитать метрики)"); break;
 	case "calc":  print reco_todo("server", $_GET["action"], "посчитать предсказания"); break;
 	case "make":  print reco_todo("server", $_GET["action"], "дать рекомендации по группам размещения"); break;
+	case "test":  print reco_server_try(); break;
 	case "":      print reco_err("empty action"); break;
 	default:      print reco_err("unknown action (".htmlspecialchars(@$_GET["action"]).")"); break;
 }

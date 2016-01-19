@@ -1,14 +1,14 @@
 <?php
 
 // --------------------------------------------------------------------------
-// Пробы всякой фигни на клиенте RECO
+// Пробы всякой фигни на сервере RECO
 // --------------------------------------------------------------------------
 
-function reco_client_try() {
+function reco_server_try() {
 	ob_start();
 	header('Content-type: text/plain; charset=utf-8');
 
-	print reco_client_config_serverurl();
+	print "here";
 
 	return ob_get_clean();
 }
