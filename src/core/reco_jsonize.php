@@ -5,7 +5,7 @@
 // --------------------------------------------------------------------------
 
 function reco_jsonize($t) {
-	if(strpos($t, 'reco_') !== 0) {
+	if(strpos($t, "reco_") !== 0) {
 		return reco_err("impossible function (".htmlspecialchars($t)."), reco_* required");
 	}
 	if(!function_exists($t)) {

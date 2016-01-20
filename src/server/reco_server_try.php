@@ -6,7 +6,7 @@
 
 function reco_server_try() {
 	ob_start();
-	header('Content-type: text/plain; charset=utf-8');
+	header("Content-type: text/plain; charset=utf-8");
 
 	print "here";
 
