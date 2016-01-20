@@ -26,7 +26,7 @@ function reco_server_const($name = "", $preset = "") {
 
 		// Словность токенов из текста
 		$preset_arr["all_token"] = array(
-			"Mono", "Di", "Trio", "Passage"
+			"Mono", "Di", "Trio", "Passage",
 		);
 
 		// Словные константы
@@ -34,7 +34,7 @@ function reco_server_const($name = "", $preset = "") {
 			"StrictLocalTF",  "StrictLocalTD",  "StrictLocalPF",  "StrictLocalPD",  "StrictLocalBF",  "StrictLocalBD",  "StrictLocalDF",  "StrictLocalDD",
 			"StrictGlobalTF", "StrictGlobalTD", "StrictGlobalPF", "StrictGlobalPD", "StrictGlobalBF", "StrictGlobalBD", "StrictGlobalDF", "StrictGlobalDD",
 			"BaseLocalTF",    "BaseLocalTD",    "BaseLocalPF",    "BaseLocalPD",    "BaseLocalBF",    "BaseLocalBD",    "BaseLocalDF",    "BaseLocalDD",
-			"BaseGlobalTF",   "BaseGlobalTD",   "BaseGlobalPF",   "BaseGlobalPD",   "BaseGlobalBF",   "BaseGlobalBD",   "BaseGlobalDF",   "BaseGlobalDD"
+			"BaseGlobalTF",   "BaseGlobalTD",   "BaseGlobalPF",   "BaseGlobalPD",   "BaseGlobalBF",   "BaseGlobalBD",   "BaseGlobalDF",   "BaseGlobalDD",
 		);
 
 		// Полный набор имён
