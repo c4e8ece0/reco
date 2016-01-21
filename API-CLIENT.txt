@@ -8,7 +8,6 @@ POST @ SERVER?action=awake
 siteurl: "http://somehost/prefix/client.php" // урл для клиента
 name: "Сайт про ласты"                       // простое название сайта
 secret: "12312312312312312312312312312312"   // ключ доступа, [a-f0-9]{32}
-ts: 123123123                                // unix-timestamp сервера
 
 JSON-Ответ
 ---------

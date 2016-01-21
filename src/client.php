@@ -40,13 +40,46 @@ foreach($funcs as &$path) {
 
 // Обработка запроса
 switch(@$_GET["action"]) {
-	case "ping":       print reco_jsonize("reco_client_api_".$_GET["action"]); break;
-	case "entities":   print reco_jsonize("reco_client_api_".$_GET["action"]); break;
-	case "entitylist": print reco_jsonize("reco_client_api_".$_GET["action"], reco_slug($_GET["target"])); break;
-	case "detail":     print reco_jsonize("reco_client_api_".$_GET["action"], reco_slug($_GET["target"]), intval($_GET["id"])); break;
-	case "test":       print reco_client_try(); break;
-	case "":           print reco_err("empty action"); break;
-	default:           print reco_err("unknown action (".htmlspecialchars($_GET["action"]).")"); break;
+	// ----------------------------------------------------------------------
+	case "ping":
+		print reco_jsonize(
+			"reco_client_api_".$_GET["action"]
+		);
+		break;
+	// ----------------------------------------------------------------------
+	case "entities":
+		print reco_jsonize(
+			"reco_client_api_".$_GET["action"]
+		);
+		break;
+	// ----------------------------------------------------------------------
+	case "entitylist":
+		print reco_jsonize(
+			"reco_client_api_".$_GET["action"],
+			reco_slug($_GET["target"])
+		);
+		break;
+	// ----------------------------------------------------------------------
+	case "detail":
+		print reco_jsonize(
+			"reco_client_api_".$_GET["action"],
+			reco_slug($_GET["target"]),
+			intval($_GET["id"])
+		);
+		break;
+	// ----------------------------------------------------------------------
+	case "test":
+		print reco_client_try();
+		break;
+	// ----------------------------------------------------------------------
+	case "":
+		print reco_err("Empty action");
+		break;
+	// ----------------------------------------------------------------------
+	default:
+		print reco_err("Unknown action (%s)", @$_GET["action"]);
+		break;
+	// ----------------------------------------------------------------------
 }
 
 ?>
