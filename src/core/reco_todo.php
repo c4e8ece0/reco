@@ -5,7 +5,7 @@
 // --------------------------------------------------------------------------
 
 function reco_todo($side, $action, $t) {
-	return reco_err(sprintf("TODO: %s.%s.%s", htmlspecialchars($side), htmlspecialchars($action), htmlspecialchars($t)));
+	return reco_err("TODO: %s.%s.%s", $side, $action, $t);
 }
 
 ?>

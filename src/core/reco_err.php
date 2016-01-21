@@ -4,7 +4,8 @@
 // Выдача сообщения об ошибке
 // --------------------------------------------------------------------------
 
-function reco_err($t) {
+function reco_err($f) {
+	$t = call_user_func_array('sprintf', func_get_args());
 	return json_encode(array("errstr"=>(string) $t));
 }
 
