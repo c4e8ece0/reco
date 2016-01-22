@@ -28,9 +28,9 @@ switch(@$_GET["action"]) {
 	case "awake":
 		print reco_jsonize(
 			"reco_server_api_awake",
-			reco_post('siteurl', 'url'),
-			reco_post('name', 'none'),
-			reco_post('secret', 'secret')
+			reco_post("siteurl", "url"),
+			reco_post("name", "none"),
+			reco_post("secret", "secret")
 		);
 		break;
 	// ----------------------------------------------------------------------
@@ -78,7 +78,7 @@ switch(@$_GET["action"]) {
 		print reco_todo(
 			"server",
 			$_GET["action"],
-			"reco_stat_word(\$_GET['list'], reco_server_config_wordstat())"
+			"reco_stat_word(\$_GET[\"list\"], reco_server_config_wordstat())"
 		);
 		break;
 	// ----------------------------------------------------------------------

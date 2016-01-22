@@ -59,5 +59,4 @@ function reco_server_const($name = "", $preset = "") {
 	reco_panic(__FUNCTION__, sprintf("Name or preset not found (%s|%s)", $name, $preset));
 }
 
-
 ?>

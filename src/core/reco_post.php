@@ -9,18 +9,18 @@ function reco_post($param, $func) {
 
 	switch($func) {
 		// ------------------------------------------------------------------
-		case 'none':
+		case "none":
 			return $val;
 		// ------------------------------------------------------------------
-		case 'url':
+		case "url":
 			$opts = array(
-			    'options' => array(
-			        'default' => null,
+			    "options" => array(
+			        "default" => null,
 			    ),
 			);
 			return filter_var($val, FILTER_VALIDATE_URL);
 		// ------------------------------------------------------------------
-		case 'secret':
+		case "secret":
 			if(strlen($param) != 32
 		 		|| !preg_match("#[a-f0-9]{32}#", $param)
 		 	) {
@@ -28,7 +28,7 @@ function reco_post($param, $func) {
 			}
 			return reco_server_checksecret($param) ? true : null;
 		// ------------------------------------------------------------------
-		case 'chk':
+		case "chk":
 			return md5($param);
 		// ------------------------------------------------------------------
 		default:
