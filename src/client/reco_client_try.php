@@ -10,6 +10,8 @@ function reco_client_try() {
 
 	print reco_client_config_serverurl();
 
+	print_r($_SERVER);
+
 	return ob_get_clean();
 }
 
