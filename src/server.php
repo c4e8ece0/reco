@@ -28,9 +28,9 @@ switch(@$_GET["action"]) {
 	case "awake":
 		print reco_jsonize(
 			"reco_server_api_awake",
-			reco_post("siteurl", "url"),
-			reco_post("name", "none"),
-			reco_post("secret", "secret")
+			reco_prep("siteurl", "url"),
+			reco_prep("name", "none"),
+			reco_prep("secret", "secret")
 		);
 		break;
 	// ----------------------------------------------------------------------

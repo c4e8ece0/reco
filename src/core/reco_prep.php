@@ -4,7 +4,7 @@
 // Обработка POST-параметров
 // --------------------------------------------------------------------------
 
-function reco_post($param, $func) {
+function reco_prep($param, $func) {
 	$val = (string) @$_POST[$param];
 
 	switch($func) {
