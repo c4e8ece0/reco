@@ -5,8 +5,7 @@
 // --------------------------------------------------------------------------
 
 function reco_client_api_ping() {
-	$arr = reco_client_profile();
-	// TODO: post data to server url
+	return reco_send_server("awake", reco_client_profile());
 }
 
 ?>
